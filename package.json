@@ -1,0 +1,26 @@
+{
+  "name": "movies-api-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulagallas/movies-api-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulagallas/movies-api-challenge/issues"
+  },
+  "homepage": "https://github.com/paulagallas/movies-api-challenge#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  }
+}
