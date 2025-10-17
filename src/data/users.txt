@@ -5,5 +5,26 @@
     "firstName": "Paula",
     "lastName": "Gallas",
     "password": "1234"
+  },
+  {
+    "id": "1760717832935",
+    "email": "lucia@mail.com",
+    "firstName": "Paula",
+    "lastName": "Gallas",
+    "password": "1234"
+  },
+  {
+    "id": "1760732384865",
+    "email": "lu@mail.com",
+    "firstName": "Paula",
+    "lastName": "Gallas",
+    "password": "1234"
+  },
+  {
+    "id": "1760733691337",
+    "email": "luli@mail.com",
+    "firstName": "Paula",
+    "lastName": "Gallas",
+    "password": "1234"
   }
 ]

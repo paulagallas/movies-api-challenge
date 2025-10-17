@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\businessLogic",
+    "\\src\\businessLogic\\domain",
+    "\\src\\businessLogic\\services",
+    "\\src\\data",
+    "\\src\\dataAccess",
+    "\\src\\webApi",
+    "\\src\\webApi\\middlewares",
+    "\\src\\webApi\\routes"
+  ],
+  "SelectedNode": "\\src\\app.js",
+  "PreviewInSolutionExplorer": false
+}

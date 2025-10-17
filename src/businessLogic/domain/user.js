@@ -1,7 +1,8 @@
+import { AppError } from "../../webApi/middlewares/error-handler.js";
 export class User {
     constructor({ id, email, firstName, lastName, password }) {
         if (!email || !firstName || !lastName || !password) {
-            throw new Error("Faltan campos requeridos para crear el usuario");
+            throw new AppError(400, "Faltan campos requeridos para crear el usuario", "VALIDATION");
         }
 
         this.id = id || Date.now().toString();

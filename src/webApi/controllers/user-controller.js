@@ -1,6 +1,5 @@
-import { register } from "../../businessLogic/services/user-service.js";
-
-export async function registerController(req, res) {
-    const user = await register(req.body);
-    res.status(201).json(user);
-}
+export const makeRegisterController = ({ userService }) =>
+    async (req, res) => {
+        const user = await userService.register(req.body);
+        res.status(201).json(user);
+    };
