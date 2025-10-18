@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\middlewares\\auth-middleware.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\webApi\\middlewares\\auth-middleware.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\businessLogic\\domain\\user.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\businessLogic\\domain\\user.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\routes\\user-routes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\webApi\\routes\\user-routes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\routes\\movie-routes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\webApi\\routes\\movie-routes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\routes\\auth-routes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\webApi\\routes\\auth-routes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\middlewares\\error-handler.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\webApi\\middlewares\\error-handler.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,7 +48,7 @@
         },
         {
           "DockedWidth": 377,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -64,28 +68,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "user.js",
-              "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\businessLogic\\domain\\user.js",
-              "RelativeDocumentMoniker": "src\\businessLogic\\domain\\user.js",
-              "ToolTip": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\businessLogic\\domain\\user.js",
-              "RelativeToolTip": "src\\businessLogic\\domain\\user.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-17T20:32:48.161Z",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-18T13:49:20.591Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "user-routes.js",
               "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\routes\\user-routes.js",
               "RelativeDocumentMoniker": "src\\webApi\\routes\\user-routes.js",
               "ToolTip": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\routes\\user-routes.js",
               "RelativeToolTip": "src\\webApi\\routes\\user-routes.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-17T20:21:01.544Z",
+              "WhenOpened": "2025-10-18T13:44:23.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "movie-routes.js",
+              "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\routes\\movie-routes.js",
+              "RelativeDocumentMoniker": "src\\webApi\\routes\\movie-routes.js",
+              "ToolTip": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\routes\\movie-routes.js",
+              "RelativeToolTip": "src\\webApi\\routes\\movie-routes.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-18T13:44:10.581Z",
               "EditorCaption": ""
             },
             {
@@ -96,22 +113,22 @@
               "RelativeDocumentMoniker": "src\\webApi\\routes\\auth-routes.js",
               "ToolTip": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\routes\\auth-routes.js",
               "RelativeToolTip": "src\\webApi\\routes\\auth-routes.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-17T20:20:42.931Z",
+              "WhenOpened": "2025-10-18T13:44:09.117Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "auth-middleware.js",
-              "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\middlewares\\auth-middleware.js",
-              "RelativeDocumentMoniker": "src\\webApi\\middlewares\\auth-middleware.js",
-              "ToolTip": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\middlewares\\auth-middleware.js",
-              "RelativeToolTip": "src\\webApi\\middlewares\\auth-middleware.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "error-handler.js",
+              "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\middlewares\\error-handler.js",
+              "RelativeDocumentMoniker": "src\\webApi\\middlewares\\error-handler.js",
+              "ToolTip": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\middlewares\\error-handler.js",
+              "RelativeToolTip": "src\\webApi\\middlewares\\error-handler.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-17T20:20:39.901Z",
+              "WhenOpened": "2025-10-18T13:44:07.135Z",
               "EditorCaption": ""
             },
             {

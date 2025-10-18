@@ -26,5 +26,19 @@
     "firstName": "Paula",
     "lastName": "Gallas",
     "password": "1234"
+  },
+  {
+    "id": "1760793516235",
+    "email": "pauu@example.com",
+    "firstName": "Pau",
+    "lastName": "Gallas",
+    "password": "pass"
+  },
+  {
+    "id": "1760794854119",
+    "email": "pauuu@example.com",
+    "firstName": "Pau",
+    "lastName": "Gallas",
+    "password": "pass"
   }
 ]
