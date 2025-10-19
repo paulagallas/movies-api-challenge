@@ -4,13 +4,13 @@
     "\\src",
     "\\src\\businessLogic",
     "\\src\\businessLogic\\domain",
+    "\\src\\businessLogic\\errors",
     "\\src\\businessLogic\\services",
-    "\\src\\infra",
+    "\\src\\dataAccess",
     "\\src\\webApi",
-    "\\src\\webApi\\controllers",
     "\\src\\webApi\\middlewares",
     "\\src\\webApi\\routes"
   ],
-  "SelectedNode": "\\src\\app.js",
+  "SelectedNode": "\\src\\businessLogic\\errors\\app-errors.js",
   "PreviewInSolutionExplorer": false
 }

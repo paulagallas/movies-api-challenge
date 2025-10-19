@@ -11,8 +11,6 @@ import errorHandler from "./webApi/middlewares/error-handler.js";
 const app = express();
 app.use(express.json());
 
-console.log("TMDB API KEY:", process.env.TMDB_API_KEY);
-
 // JSON inválido
 app.use((err, _req, res, next) => {
     if (err instanceof SyntaxError && "body" in err) {
