@@ -47,5 +47,12 @@
     "firstName": "Pau",
     "lastName": "Gallas",
     "password": "pass"
+  },
+  {
+    "id": "1760910532736",
+    "email": "hola@example.com",
+    "firstName": "Pau",
+    "lastName": "Gallas",
+    "password": "pass"
   }
 ]

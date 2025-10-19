@@ -33,5 +33,10 @@
     "token": "41ca3264-18b8-4bc6-b393-9d3df7f7e873",
     "email": "lucas@example.com",
     "createdAt": "2025-10-19T13:52:03.874Z"
+  },
+  {
+    "token": "9a5552f8-e2ec-4144-bf00-e99bebc7881d",
+    "email": "hola@example.com",
+    "createdAt": "2025-10-19T21:49:03.553Z"
   }
 ]

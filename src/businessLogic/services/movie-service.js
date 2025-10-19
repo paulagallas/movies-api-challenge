@@ -1,4 +1,4 @@
-import { BadRequestError, NotFoundError } from "../../webApi/errors/app-errors.js";
+import { BadRequestError, NotFoundError } from "../errors/app-errors.js";
 export function makeMoviesService({ tmdbClient, movieRepository }) {
     const toDto = (m) => ({
         id: m.id,

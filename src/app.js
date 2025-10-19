@@ -1,4 +1,3 @@
-
 import "dotenv/config";
 import express from "express";
 
@@ -11,31 +10,33 @@ import errorHandler from "./webApi/middlewares/error-handler.js";
 const app = express();
 app.use(express.json());
 
-// JSON inválido
+// Invalid JSON (body parser) - must be before routes and have 4 args
 app.use((err, _req, res, next) => {
-    if (err instanceof SyntaxError && "body" in err) {
-        return res.status(400).json({ error: "JSON inválido", code: "BAD_JSON" });
+    // Narrow the check so we only catch JSON parse errors
+    if (err instanceof SyntaxError && err.status === 400 && "body" in err) {
+        return res.status(400).json({ error: "Invalid JSON", code: "BAD_JSON" });
     }
     next(err);
 });
 
-// Ruta base
-app.get("/", (_req, res) => res.send("¡API funcionando!"));
+// Base route
+app.get("/", (_req, res) => res.send("API is running!"));
 
-// Rutas
+// Routes
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/movies", moviesRoutes);
 app.use("/api/favorites", favoriteRoutes);
 
-// 404
-app.use((_req, res) => res.status(404).json({ error: "Not found" }));
+// 404 - keep before error handler
+app.use((_req, res) => res.status(404).json({ error: "Not found", code: "NOT_FOUND" }));
 
-// Errores
 app.use(errorHandler);
 
-//
+// Start server
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-    console.log(`Servidor iniciado en http://localhost:${port}`);
+    console.log(`Server listening at http://localhost:${port}`);
 });
+
+export default app;

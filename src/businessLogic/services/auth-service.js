@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import { BadRequestError, UnauthorizedError, NotFoundError } from "../errors/app-errors";
+import { BadRequestError, UnauthorizedError, NotFoundError } from "../errors/app-errors.js";
 
 
 const newToken = () => crypto.randomUUID();

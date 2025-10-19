@@ -1,4 +1,4 @@
-import { NotFoundError } from "../errors/app-errors.js";
+import { NotFoundError } from "../../businessLogic/errors/app-errors.js";
 
 export const makeAddFavorite = ({ favoriteService, userService }) => async (req, res) => {
     const user = await userService.getByEmail(req.userEmail);

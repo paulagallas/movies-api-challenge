@@ -1,4 +1,5 @@
-import { BadRequestError } from "../businessLogic/errors/app-errors";
+import { BadRequestError } from "../businessLogic/errors/app-errors.js";
+
 
 const BASE = "https://api.themoviedb.org/3";
 
@@ -23,7 +24,7 @@ export function makeTmdbClient({ apiKey, language = "es-ES" }) {
         },
 
         async getMovieById(id) {
-            if (!id) throw new BadRequestError("Movie ID is required");)
+            if (!id) throw new BadRequestError("Movie ID is required");
             return call(`/movie/${id}`);
         }
     };

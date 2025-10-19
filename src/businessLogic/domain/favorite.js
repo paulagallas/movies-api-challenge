@@ -1,4 +1,4 @@
-import { BadRequestError } from "../errors/app-errors";
+import { BadRequestError } from "../errors/app-errors.js";
 
 export class Favorite {
     constructor({ userId, movieId, addedAt }) {

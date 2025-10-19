@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { asyncHandler } from "../middlewares/error-handler.js";
+import asyncHandler from "../middlewares/async-handler.js";
 import { makeLoginController } from "../controllers/auth-controller.js";
 
 import { makeAuthService } from "../../businessLogic/services/auth-service.js";

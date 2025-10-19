@@ -23,6 +23,9 @@ const requireAuth = makeRequireAuth({ authService });
 const tmdbClient = makeTmdbClient({ apiKey: process.env.TMDB_API_KEY });
 const moviesService = makeMoviesService({ tmdbClient, movieRepository });
 
+router.use(requireAuth);
+
 // rutas
-router.get("/", requireAuth, asyncHandler(makeSearchMoviesController({ moviesService })));
+router.get("/", asyncHandler(makeSearchMoviesController({ moviesService })));
+
 export default router;

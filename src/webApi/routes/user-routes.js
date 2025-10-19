@@ -1,5 +1,6 @@
+// webApi/routes/user-routes.js
 import { Router } from "express";
-import { asyncHandler } from "../middlewares/error-handler.js";
+import asyncHandler from "../middlewares/async-handler.js";
 import { makeRegisterController } from "../controllers/user-controller.js";
 
 import { makeUserService } from "../../businessLogic/services/user-service.js";

@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\data",
     "\\src",
     "\\src\\businessLogic",
-    "\\src\\businessLogic\\services",
-    "\\src\\dataAccess",
-    "\\src\\infra",
+    "\\src\\businessLogic\\domain",
+    "\\src\\businessLogic\\errors",
     "\\src\\webApi",
     "\\src\\webApi\\controllers",
     "\\src\\webApi\\middlewares",
     "\\src\\webApi\\routes"
   ],
-  "SelectedNode": "\\src\\webApi\\routes\\auth-routes.js",
+  "SelectedNode": "\\data\\users.txt",
   "PreviewInSolutionExplorer": false
 }

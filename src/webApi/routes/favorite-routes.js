@@ -9,6 +9,7 @@ import { makeTmdbClient } from "../../infra/tmdb-client.js";
 import * as userRepository from "../../dataAccess/repositories/user-repository.js";
 import * as sessionRepository from "../../dataAccess/repositories/session-repository.js";
 import { makeAuthService } from "../../businessLogic/services/auth-service.js";
+import { makeUserService } from "../../businessLogic/services/user-service.js";
 import { makeRequireAuth } from "../middlewares/auth-middleware.js";
 
 const router = Router();
@@ -17,20 +18,17 @@ const router = Router();
 const authService = makeAuthService({ userRepository, sessionRepository });
 const requireAuth = makeRequireAuth({ authService });
 
-// deps service
+// services
+const userService = makeUserService({ userRepository });
 const tmdbClient = makeTmdbClient({ apiKey: process.env.TMDB_API_KEY });
 const favoriteService = makeFavoriteService({ tmdbClient });
 
 // proteger todo el router
 router.use(requireAuth);
 
-// listar favoritos del usuario actual
-router.get("/", asyncHandler(makeListFavorites({ favoriteService, userRepository })));
-
-// agregar favorito
-router.post("/:id", asyncHandler(makeAddFavorite({ favoriteService, userRepository })));
-
-// eliminar favorito
-router.delete("/:id", asyncHandler(makeRemoveFavorite({ favoriteService, userRepository })));
+// rutas (controllers reciben services, no repos)
+router.get("/", asyncHandler(makeListFavorites({ favoriteService, userService })));
+router.post("/:id", asyncHandler(makeAddFavorite({ favoriteService, userService })));
+router.delete("/:id", asyncHandler(makeRemoveFavorite({ favoriteService, userService })));
 
 export default router;
