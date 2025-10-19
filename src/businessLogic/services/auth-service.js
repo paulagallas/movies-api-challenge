@@ -1,17 +1,18 @@
 import crypto from "crypto";
-import { AppError } from "../../webApi/middlewares/error-handler.js";
+import { BadRequestError, UnauthorizedError, NotFoundError } from "../errors/app-errors";
+
 
 const newToken = () => crypto.randomUUID();
 
 export const makeAuthService = ({ userRepository, sessionRepository }) => ({
     async loginService({ email, password }) {
         if (!email || !password) {
-            throw new AppError(400, "Email y password son requeridos", "VALIDATION");
+            throw new BadRequestError("All required fields must be provided");
         }
 
         const user = await userRepository.findByEmail(email);
-        if (!user) throw new AppError(404, "Usuario no registrado", "NOT_FOUND");
-        if (user.password !== password) throw new AppError(401, "Credenciales inválidas", "BAD_CREDENTIALS");
+        if (!user) throw new NotFoundError("No user found with the provided email");
+        if (user.password !== password) throw new UnauthorizedError("Invalid credentials");
 
         await sessionRepository.deleteSessionsByEmail(user.email);
 

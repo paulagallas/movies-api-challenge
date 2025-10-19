@@ -1,5 +1,6 @@
 import * as favoriteRepo from "../../dataAccess/repositories/favorite-repository.js";
 import { Favorite } from "../domain/favorite.js";
+import { BadRequestError } from "../errors/app-errors.js";
 
 export function makeFavoriteService({ tmdbClient }) {
     const toMovieDto = (m) => ({
@@ -11,11 +12,26 @@ export function makeFavoriteService({ tmdbClient }) {
     });
 
     async function add(userId, movieId) {
+        if (!userId || !movieId) {
+            throw new BadRequestError("User ID and movie ID are required");
+        }
+        const existing = await favoriteRepo.listByUser(userId);
+        if (existing.some(f => f.movieId === String(movieId))) {
+            throw new ConflictError("Movie already in favorites");
+        }
+        //verificar que exista en tmdb
         const fav = new Favorite({ userId, movieId });
         await favoriteRepo.add(fav);
+        return fav.toRecord();
     }
 
     async function remove(userId, movieId) {
+        if (!userId || !movieId) {
+            throw new BadRequestError("User ID and movie ID are required");
+        }
+        if (!(await favoriteRepo.exists(userId, movieId))) {
+            throw new NotFoundError("Favorite not found");
+        }
         await favoriteRepo.remove(userId, movieId);
     }
 

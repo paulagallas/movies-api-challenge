@@ -1,23 +1,25 @@
-export const makeAddFavorite = ({ favoriteService, userRepository }) => async (req, res) => {
-    const user = await userRepository.findByEmail(req.userEmail);
-    if (!user) return res.status(404).json({ error: "Usuario no encontrado" });
+import { NotFoundError } from "../errors/app-errors.js";
 
-    await favoriteService.add(user.id, req.params.id);
-    res.status(201).json({ message: "Added to favorites", movieId: req.params.id });
+export const makeAddFavorite = ({ favoriteService, userService }) => async (req, res) => {
+    const user = await userService.getByEmail(req.userEmail);
+    if (!user) throw new NotFoundError("User not found");
+
+    const favorite = await favoriteService.add(user.id, req.params.id);
+    res.status(201).json(favorite);
 };
 
-export const makeRemoveFavorite = ({ favoriteService, userRepository }) => async (req, res) => {
-    const user = await userRepository.findByEmail(req.userEmail);
-    if (!user) return res.status(404).json({ error: "Usuario no encontrado" });
+export const makeRemoveFavorite = ({ favoriteService, userService }) => async (req, res) => {
+    const user = await userService.getByEmail(req.userEmail);
+    if (!user) throw new NotFoundError("User not found");
 
     await favoriteService.remove(user.id, req.params.id);
-    res.json({ message: "Removed from favorites", movieId: req.params.id });
+    res.status(204).end();
 };
 
-export const makeListFavorites = ({ favoriteService, userRepository }) => async (req, res) => {
-    const user = await userRepository.findByEmail(req.userEmail);
-    if (!user) return res.status(404).json({ error: "Usuario no encontrado" });
+export const makeListFavorites = ({ favoriteService, userService }) => async (req, res) => {
+    const user = await userService.getByEmail(req.userEmail);
+    if (!user) throw new NotFoundError("User not found");
 
     const movies = await favoriteService.list(user.id);
-    res.json(movies);
+    res.status(200).json(movies);
 };

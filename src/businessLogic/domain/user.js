@@ -1,8 +1,8 @@
-import { AppError } from "../../webApi/middlewares/error-handler.js";
+import { BadRequestError } from "../errors/app-errors.js";
 export class User {
     constructor({ id, email, firstName, lastName, password }) {
         if (!email || !firstName || !lastName || !password) {
-            throw new AppError(400, "Faltan campos requeridos para crear el usuario", "VALIDATION");
+            throw new BadRequestError("All required fields (email, first name, last name, password) must be provided");
         }
 
         this.id = id || Date.now().toString();
