@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\data",
     "\\src",
     "\\src\\businessLogic",
-    "\\src\\dataAccess",
-    "\\src\\dataAccess\\repositories",
+    "\\src\\businessLogic\\domain",
+    "\\src\\businessLogic\\services",
     "\\src\\infra",
     "\\src\\webApi",
     "\\src\\webApi\\controllers",
+    "\\src\\webApi\\middlewares",
     "\\src\\webApi\\routes"
   ],
-  "SelectedNode": "\\.gitignore",
+  "SelectedNode": "\\src\\app.js",
   "PreviewInSolutionExplorer": false
 }

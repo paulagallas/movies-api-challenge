@@ -15,8 +15,13 @@ export function makeTmdbClient({ apiKey, language = "es-ES" }) {
             if (!query || !query.trim()) return { results: [] };
             return call("/search/movie", { query });
         },
+
         async popular() {
             return call("/movie/popular");
+        },
+
+        async getMovieById(id) {
+            return call(`/movie/${id}`);
         }
     };
 }

@@ -1,12 +1,10 @@
-// webApi/routes/movie-routes.js
+// webApi/routes/favorite-routes.js
 import { Router } from "express";
 import asyncHandler from "../middlewares/async-handler.js";
 
-import { makeSearchMoviesController } from "../controllers/movie-controller.js";
-
-import { makeMoviesService } from "../../businessLogic/services/movie-service.js";
+import { makeAddFavorite, makeRemoveFavorite, makeListFavorites } from "../controllers/favorite-controller.js";
+import { makeFavoriteService } from "../../businessLogic/services/favorite-service.js";
 import { makeTmdbClient } from "../../infra/tmdb-client.js";
-import * as movieRepository from "../../dataAccess/repositories/movie-repository.js";
 
 import * as userRepository from "../../dataAccess/repositories/user-repository.js";
 import * as sessionRepository from "../../dataAccess/repositories/session-repository.js";
@@ -19,10 +17,20 @@ const router = Router();
 const authService = makeAuthService({ userRepository, sessionRepository });
 const requireAuth = makeRequireAuth({ authService });
 
-// tmdb + service
+// deps service
 const tmdbClient = makeTmdbClient({ apiKey: process.env.TMDB_API_KEY });
-const moviesService = makeMoviesService({ tmdbClient, movieRepository });
+const favoriteService = makeFavoriteService({ tmdbClient });
 
-// rutas
-router.get("/", requireAuth, asyncHandler(makeSearchMoviesController({ moviesService })));
+// proteger todo el router
+router.use(requireAuth);
+
+// listar favoritos del usuario actual
+router.get("/", asyncHandler(makeListFavorites({ favoriteService, userRepository })));
+
+// agregar favorito
+router.post("/:id", asyncHandler(makeAddFavorite({ favoriteService, userRepository })));
+
+// eliminar favorito
+router.delete("/:id", asyncHandler(makeRemoveFavorite({ favoriteService, userRepository })));
+
 export default router;
