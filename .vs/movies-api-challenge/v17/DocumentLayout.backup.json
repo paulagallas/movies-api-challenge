@@ -7,6 +7,18 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\middlewares\\error-handler.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\webApi\\middlewares\\error-handler.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\middlewares\\auth-middleware.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\webApi\\middlewares\\auth-middleware.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\middlewares\\async-handler.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\webApi\\middlewares\\async-handler.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\businessLogic\\domain\\user.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\businessLogic\\domain\\user.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -52,11 +64,11 @@
         },
         {
           "DockedWidth": 377,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "tmdb-client.js",
               "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\infra\\tmdb-client.js",
               "RelativeDocumentMoniker": "src\\infra\\tmdb-client.js",
@@ -65,33 +77,45 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-10-18T14:31:00.327Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "README.md",
-              "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\README.md",
-              "RelativeDocumentMoniker": "README.md",
-              "ToolTip": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\README.md",
-              "RelativeToolTip": "README.md",
-              "ViewState": "AgIAACcAAAAAAAAAAAAgwEYAAABsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-10-20T03:18:14.599Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "user.js",
-              "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\businessLogic\\domain\\user.js",
-              "RelativeDocumentMoniker": "src\\businessLogic\\domain\\user.js",
-              "ToolTip": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\businessLogic\\domain\\user.js",
-              "RelativeToolTip": "src\\businessLogic\\domain\\user.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAeAAAAAAAAAA==",
+              "Title": "error-handler.js",
+              "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\middlewares\\error-handler.js",
+              "RelativeDocumentMoniker": "src\\webApi\\middlewares\\error-handler.js",
+              "ToolTip": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\middlewares\\error-handler.js",
+              "RelativeToolTip": "src\\webApi\\middlewares\\error-handler.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-20T03:04:36.61Z",
+              "WhenOpened": "2025-10-20T04:08:27.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "auth-middleware.js",
+              "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\middlewares\\auth-middleware.js",
+              "RelativeDocumentMoniker": "src\\webApi\\middlewares\\auth-middleware.js",
+              "ToolTip": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\middlewares\\auth-middleware.js",
+              "RelativeToolTip": "src\\webApi\\middlewares\\auth-middleware.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-20T04:08:15.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "async-handler.js",
+              "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\middlewares\\async-handler.js",
+              "RelativeDocumentMoniker": "src\\webApi\\middlewares\\async-handler.js",
+              "ToolTip": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\middlewares\\async-handler.js",
+              "RelativeToolTip": "src\\webApi\\middlewares\\async-handler.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-20T04:08:05.89Z",
               "EditorCaption": ""
             },
             {
@@ -112,7 +136,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAACsAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-10-20T03:18:14.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "user.js",
+              "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\businessLogic\\domain\\user.js",
+              "RelativeDocumentMoniker": "src\\businessLogic\\domain\\user.js",
+              "ToolTip": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\businessLogic\\domain\\user.js",
+              "RelativeToolTip": "src\\businessLogic\\domain\\user.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-20T03:04:36.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "sessions.txt",
               "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\data\\sessions.txt",
               "RelativeDocumentMoniker": "data\\sessions.txt",
@@ -120,12 +169,11 @@
               "RelativeToolTip": "data\\sessions.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-10-20T02:44:40.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-20T02:44:40.318Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "favorites.txt",
               "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\data\\favorites.txt",
               "RelativeDocumentMoniker": "data\\favorites.txt",
@@ -133,12 +181,11 @@
               "RelativeToolTip": "data\\favorites.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-10-20T02:44:38.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-20T02:44:38.906Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "users.txt",
               "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\data\\users.txt",
               "RelativeDocumentMoniker": "data\\users.txt",
@@ -146,8 +193,7 @@
               "RelativeToolTip": "data\\users.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-10-20T02:36:19.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-20T02:36:19.049Z"
             },
             {
               "$type": "Bookmark",

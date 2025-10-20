@@ -1,6 +1,7 @@
 {
   "ExpandedNodes": [
-    "\\coleccionPostman",
+    "",
+    "\\src",
     "\\src\\businessLogic",
     "\\src\\businessLogic\\domain",
     "\\src\\businessLogic\\errors",
@@ -10,5 +11,6 @@
     "\\src\\webApi\\middlewares",
     "\\src\\webApi\\routes"
   ],
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }
