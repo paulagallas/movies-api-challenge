@@ -1,56 +1,14 @@
 [
   {
-    "id": "1760711446528",
-    "email": "paula@mail.com",
-    "firstName": "Paula",
-    "lastName": "Gallas",
-    "password": "1234"
-  },
-  {
-    "id": "1760717832935",
-    "email": "lucia@mail.com",
-    "firstName": "Paula",
-    "lastName": "Gallas",
-    "password": "1234"
-  },
-  {
-    "id": "1760732384865",
-    "email": "lu@mail.com",
-    "firstName": "Paula",
-    "lastName": "Gallas",
-    "password": "1234"
-  },
-  {
-    "id": "1760733691337",
-    "email": "luli@mail.com",
-    "firstName": "Paula",
-    "lastName": "Gallas",
-    "password": "1234"
-  },
-  {
-    "id": "1760793516235",
-    "email": "pauu@example.com",
+    "id": "1760922160203",
+    "email": "paula@example.com",
     "firstName": "Pau",
     "lastName": "Gallas",
     "password": "pass"
   },
   {
-    "id": "1760794854119",
-    "email": "pauuu@example.com",
-    "firstName": "Pau",
-    "lastName": "Gallas",
-    "password": "pass"
-  },
-  {
-    "id": "1760881303191",
-    "email": "lucas@example.com",
-    "firstName": "Pau",
-    "lastName": "Gallas",
-    "password": "pass"
-  },
-  {
-    "id": "1760910532736",
-    "email": "hola@example.com",
+    "id": "1760922179797",
+    "email": "lucia@example.com",
     "firstName": "Pau",
     "lastName": "Gallas",
     "password": "pass"

@@ -25,3 +25,11 @@ export async function remove(userId, movieId) {
     const updated = data.filter(f => !(f.userId === uid && f.movieId === mid));
     await writeJson(FILE, updated);
 }
+
+export async function exists(userId, movieId) {
+    const data = await readJson(FILE);
+    const uid = String(userId);
+    const mid = String(movieId);
+    return data.some(f => f.userId === uid && f.movieId === mid);
+}
+

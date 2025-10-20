@@ -1,42 +1,7 @@
 [
   {
-    "token": "0f148e58-551d-4ff0-b4a1-82f4394e6ba4",
-    "email": "paula@mail.com",
-    "createdAt": "2025-10-17T14:30:54.025Z"
-  },
-  {
-    "token": "e402232c-3421-4430-836b-76743de7eeaf",
-    "email": "lucia@mail.com",
-    "createdAt": "2025-10-17T16:17:31.022Z"
-  },
-  {
-    "token": "53f37581-53df-4610-8a2f-e740b6834afd",
-    "email": "lu@mail.com",
-    "createdAt": "2025-10-17T20:20:06.286Z"
-  },
-  {
-    "token": "31fd778d-b1f6-437a-ab05-5596e7fffc79",
-    "email": "luli@mail.com",
-    "createdAt": "2025-10-17T20:41:37.202Z"
-  },
-  {
-    "token": "fb76300f-f933-44a0-83ca-4b5dccebcd1b",
-    "email": "pauu@example.com",
-    "createdAt": "2025-10-18T13:18:50.980Z"
-  },
-  {
-    "token": "121bdc2f-2541-4c9b-80ac-4f1b239abec9",
-    "email": "pauuu@example.com",
-    "createdAt": "2025-10-18T13:41:02.260Z"
-  },
-  {
-    "token": "41ca3264-18b8-4bc6-b393-9d3df7f7e873",
-    "email": "lucas@example.com",
-    "createdAt": "2025-10-19T13:52:03.874Z"
-  },
-  {
-    "token": "9a5552f8-e2ec-4144-bf00-e99bebc7881d",
-    "email": "hola@example.com",
-    "createdAt": "2025-10-19T21:49:03.553Z"
+    "token": "eb639193-19d8-49d1-af53-e922eefec3d8",
+    "email": "paula@example.com",
+    "createdAt": "2025-10-20T01:14:28.632Z"
   }
 ]

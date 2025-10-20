@@ -7,7 +7,10 @@ export const makeUserService = ({ userRepository }) => ({
         if (!email || !firstName || !lastName || !password) {
             throw new BadRequestError("All required fields must be provided");
         }
-
+        const normEmail = String(email).trim().toLowerCase();
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normEmail)) {
+            throw new BadRequestError("Invalid email format");
+        }
         const exists = await userRepository.findByEmail(email);
         if (exists) throw new ConflictError("Email is already registered");
 

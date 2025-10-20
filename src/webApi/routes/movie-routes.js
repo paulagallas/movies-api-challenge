@@ -1,4 +1,3 @@
-// webApi/routes/movie-routes.js
 import { Router } from "express";
 import asyncHandler from "../middlewares/async-handler.js";
 

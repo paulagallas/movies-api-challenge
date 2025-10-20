@@ -10,9 +10,7 @@ import errorHandler from "./webApi/middlewares/error-handler.js";
 const app = express();
 app.use(express.json());
 
-// Invalid JSON (body parser) - must be before routes and have 4 args
 app.use((err, _req, res, next) => {
-    // Narrow the check so we only catch JSON parse errors
     if (err instanceof SyntaxError && err.status === 400 && "body" in err) {
         return res.status(400).json({ error: "Invalid JSON", code: "BAD_JSON" });
     }

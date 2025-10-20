@@ -9,8 +9,14 @@ import * as sessionRepository from "../../dataAccess/repositories/session-reposi
 const router = Router();
 
 const authService = makeAuthService({ userRepository, sessionRepository });
-const loginController = makeLoginController({ authService });
 
-router.post("/login", asyncHandler(loginController));
+const loginController = makeLoginController({ authService });
+//const logoutController = makeLogoutController({ authService });
+
+// crear sesión
+router.post("/", asyncHandler(loginController));
+
+// cerrar sesión
+//router.delete("/", asyncHandler(logoutController));
 
 export default router;

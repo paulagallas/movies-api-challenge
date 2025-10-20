@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\data",
     "\\src",
     "\\src\\businessLogic",
-    "\\src\\businessLogic\\domain",
-    "\\src\\businessLogic\\errors",
+    "\\src\\businessLogic\\services",
+    "\\src\\dataAccess",
+    "\\src\\dataAccess\\repositories",
     "\\src\\webApi",
     "\\src\\webApi\\controllers",
     "\\src\\webApi\\middlewares",
     "\\src\\webApi\\routes"
   ],
-  "SelectedNode": "\\data\\users.txt",
+  "SelectedNode": "\\src\\businessLogic\\services\\favorite-service.js",
   "PreviewInSolutionExplorer": false
 }

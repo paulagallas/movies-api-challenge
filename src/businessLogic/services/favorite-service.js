@@ -1,8 +1,7 @@
-import * as favoriteRepo from "../../dataAccess/repositories/favorite-repository.js";
 import { Favorite } from "../domain/favorite.js";
-import { BadRequestError } from "../errors/app-errors.js";
+import { BadRequestError, ConflictError, NotFoundError } from "../errors/app-errors.js";
 
-export function makeFavoriteService({ tmdbClient }) {
+export function makeFavoriteService({ favoriteRepository, tmdbClient }) {
     const toMovieDto = (m) => ({
         id: m.id,
         title: m.title,
@@ -12,31 +11,22 @@ export function makeFavoriteService({ tmdbClient }) {
     });
 
     async function add(userId, movieId) {
-        if (!userId || !movieId) {
-            throw new BadRequestError("User ID and movie ID are required");
-        }
-        const existing = await favoriteRepo.listByUser(userId);
-        if (existing.some(f => f.movieId === String(movieId))) {
-            throw new ConflictError("Movie already in favorites");
-        }
-        //verificar que exista en tmdb
+        if (!userId || !movieId) throw new BadRequestError("User ID and movie ID are required");
+        try { await tmdbClient.getMovieById(movieId); } catch { throw new NotFoundError("Movie not found"); }
+        if (await favoriteRepository.exists(userId, movieId)) throw new ConflictError("Movie already in favorites");
         const fav = new Favorite({ userId, movieId });
-        await favoriteRepo.add(fav);
+        await favoriteRepository.add(fav);
         return fav.toRecord();
     }
 
     async function remove(userId, movieId) {
-        if (!userId || !movieId) {
-            throw new BadRequestError("User ID and movie ID are required");
-        }
-        if (!(await favoriteRepo.exists(userId, movieId))) {
-            throw new NotFoundError("Favorite not found");
-        }
-        await favoriteRepo.remove(userId, movieId);
+        if (!userId || !movieId) throw new BadRequestError("User ID and movie ID are required");
+        if (!(await favoriteRepository.exists(userId, movieId))) throw new NotFoundError("Favorite not found");
+        await favoriteRepository.remove(userId, movieId);
     }
 
     async function list(userId) {
-        const favs = await favoriteRepo.listByUser(userId);
+        const favs = await favoriteRepository.listByUser(userId);
         if (!favs.length) return [];
         const movies = await Promise.all(favs.map(f => tmdbClient.getMovieById(f.movieId)));
         return movies.map((m, i) => ({ ...toMovieDto(m), addedAt: favs[i].addedAt }));
