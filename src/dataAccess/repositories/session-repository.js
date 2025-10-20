@@ -22,3 +22,13 @@ export async function findByToken(token) {
     const all = await getAllSessions();
     return all.find(s => s.token === token) || null;
 }
+
+export async function removeByToken(token) {
+    const all = await getAllSessions();
+    const filtered = all.filter(s => s.token !== token);
+    const removed = filtered.length !== all.length;
+    if (removed) {
+        await writeJson(FILE, filtered);
+    }
+    return removed;
+}

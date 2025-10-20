@@ -1,7 +1,6 @@
 import crypto from "crypto";
 import { BadRequestError, UnauthorizedError, NotFoundError } from "../errors/app-errors.js";
 
-
 const newToken = () => crypto.randomUUID();
 
 export const makeAuthService = ({ userRepository, sessionRepository }) => ({
@@ -10,7 +9,7 @@ export const makeAuthService = ({ userRepository, sessionRepository }) => ({
             throw new BadRequestError("All required fields must be provided");
         }
 
-        const user = await userRepository.findByEmail(email);
+        const user = await userRepository.findByEmail(String(email).trim().toLowerCase());
         if (!user) throw new NotFoundError("No user found with the provided email");
         if (user.password !== password) throw new UnauthorizedError("Invalid credentials");
 
@@ -26,11 +25,23 @@ export const makeAuthService = ({ userRepository, sessionRepository }) => ({
         return { token };
     },
 
-    async validateBearer(authorizationHeader) {
-        if (!authorizationHeader) return null;
-        const token = authorizationHeader.replace(/^Bearer\s+/i, "");
+    async validateBearer(tokenOrHeader) {
+        if (!tokenOrHeader) return null;
+
+        const token = tokenOrHeader.startsWith("Bearer ")
+            ? tokenOrHeader.replace(/^Bearer\s+/i, "")
+            : tokenOrHeader;
+
         if (!token) return null;
+
         const sess = await sessionRepository.findByToken(token);
         return sess?.email || null;
     },
+
+    async logout(token) {
+        if (!token) throw new BadRequestError("Missing token");
+
+        const removed = await sessionRepository.removeByToken(token);
+        if (!removed) throw new UnauthorizedError("Invalid session");
+    }
 });

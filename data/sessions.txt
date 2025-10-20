@@ -1,7 +1,1 @@
-[
-  {
-    "token": "eb639193-19d8-49d1-af53-e922eefec3d8",
-    "email": "paula@example.com",
-    "createdAt": "2025-10-20T01:14:28.632Z"
-  }
-]
+[]
