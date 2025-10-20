@@ -1,0 +1,456 @@
+{
+  "info": {
+    "name": "Movies API Challenge (Pau)",
+    "_postman_id": "c1760927275",
+    "description": "End-to-end flow: register, login, search movies, add favorite, logout, second user flow.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Users - Register (user1)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/users",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "users"
+          ],
+          "query": []
+        },
+        "description": "",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"{{email1}}\", \"firstName\": \"{{firstName1}}\", \"lastName\": \"{{lastName1}}\", \"password\": \"{{password1}}\"}"
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Created (201) or Conflict (409 if already exists)\", function () {",
+              "  pm.expect([201,409]).to.include(pm.response.code);",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Users - Register duplicate (should be 409)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/users",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "users"
+          ],
+          "query": []
+        },
+        "description": "",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"{{email1}}\", \"firstName\": \"{{firstName1}}\", \"lastName\": \"{{lastName1}}\", \"password\": \"{{password1}}\"}"
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Conflict 409\", function () {",
+              "  pm.expect(pm.response.code).to.eql(409);",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Auth - Login (save {{token}})",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/auth",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "auth"
+          ],
+          "query": []
+        },
+        "description": "",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"{{email1}}\", \"password\": \"{{password1}}\"}"
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const data = pm.response.json();",
+              "pm.test(\"Got token\", function(){ pm.expect(data.token).to.be.a(\"string\"); });",
+              "if (data.token) { pm.collectionVariables.set(\"token\", data.token); }"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Auth - Login non-existent user (404)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/auth",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "auth"
+          ],
+          "query": []
+        },
+        "description": "",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"idontexist@example.com\", \"password\": \"whatever\"}"
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Not Found 404\", function () {",
+              "  pm.expect(pm.response.code).to.eql(404);",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Movies - Search (protected, save {{movieId}})",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/movies?query={{searchQuery}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "movies"
+          ],
+          "query": [
+            {
+              "key": "query",
+              "value": "{{searchQuery}}"
+            }
+          ]
+        },
+        "description": ""
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const data = pm.response.json();",
+              "pm.test(\"Array of movies\", function(){ pm.expect(data).to.be.an(\"array\"); pm.expect(data.length).to.be.above(0); });",
+              "pm.collectionVariables.set(\"movieId\", String(data[0].id));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Favorites - Add (uses {{movieId}})",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/favorites/{{movieId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "favorites",
+            "{{movieId}}"
+          ],
+          "query": []
+        },
+        "description": ""
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Created 201\", function(){ pm.expect(pm.response.code).to.eql(201); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Auth - Logout (DELETE /api/auth)",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/auth",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "auth"
+          ],
+          "query": []
+        },
+        "description": ""
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"No Content 204\", function(){ pm.expect(pm.response.code).to.eql(204); });",
+              "pm.collectionVariables.unset(\"token\");"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Users - Register (user2)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/users",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "users"
+          ],
+          "query": []
+        },
+        "description": "",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"{{email2}}\", \"firstName\": \"{{firstName2}}\", \"lastName\": \"{{lastName2}}\", \"password\": \"{{password2}}\"}"
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Created (201) or Conflict (409)\", function () {",
+              "  pm.expect([201,409]).to.include(pm.response.code);",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Auth - Login (user2, save {{token}})",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/auth",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "auth"
+          ],
+          "query": []
+        },
+        "description": "",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"{{email2}}\", \"password\": \"{{password2}}\"}"
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const data = pm.response.json();",
+              "pm.test(\"Got token\", function(){ pm.expect(data.token).to.be.a(\"string\"); });",
+              "if (data.token) { pm.collectionVariables.set(\"token\", data.token); }"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Favorites - List (user2, expect empty array)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/favorites",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "favorites"
+          ],
+          "query": []
+        },
+        "description": ""
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const data = pm.response.json();",
+              "pm.test(\"Empty favorites\", function(){ pm.expect(Array.isArray(data)).to.be.true; pm.expect(data.length).to.eql(0); });"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "token",
+      "value": ""
+    },
+    {
+      "key": "email1",
+      "value": "paula@example.com"
+    },
+    {
+      "key": "password1",
+      "value": "pass"
+    },
+    {
+      "key": "firstName1",
+      "value": "Paula"
+    },
+    {
+      "key": "lastName1",
+      "value": "Gallas"
+    },
+    {
+      "key": "email2",
+      "value": "luna@example.com"
+    },
+    {
+      "key": "password2",
+      "value": "pass2"
+    },
+    {
+      "key": "firstName2",
+      "value": "Luna"
+    },
+    {
+      "key": "lastName2",
+      "value": "Lopez"
+    },
+    {
+      "key": "searchQuery",
+      "value": "inception"
+    },
+    {
+      "key": "movieId",
+      "value": ""
+    }
+  ]
+}

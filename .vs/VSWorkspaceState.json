@@ -1,7 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\src",
+    "\\coleccionPostman",
     "\\src\\businessLogic",
     "\\src\\businessLogic\\domain",
     "\\src\\businessLogic\\errors",
@@ -11,6 +10,5 @@
     "\\src\\webApi\\middlewares",
     "\\src\\webApi\\routes"
   ],
-  "SelectedNode": "\\data\\favorites.txt",
   "PreviewInSolutionExplorer": false
 }
