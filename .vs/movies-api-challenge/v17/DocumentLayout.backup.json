@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\data\\users.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:data\\users.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\data\\favorites.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:data\\favorites.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\data\\sessions.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:data\\sessions.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\data\\favorites.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:data\\favorites.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\middlewares\\auth-middleware.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\webApi\\middlewares\\auth-middleware.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\data\\users.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:data\\users.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\infra\\tmdb-client.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -48,11 +44,11 @@
         },
         {
           "DockedWidth": 377,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "tmdb-client.js",
               "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\infra\\tmdb-client.js",
               "RelativeDocumentMoniker": "src\\infra\\tmdb-client.js",
@@ -61,21 +57,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-10-18T14:31:00.327Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "users.txt",
-              "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\data\\users.txt",
-              "RelativeDocumentMoniker": "data\\users.txt",
-              "ToolTip": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\data\\users.txt",
-              "RelativeToolTip": "data\\users.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-10-20T02:36:19.049Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -85,14 +67,14 @@
               "RelativeDocumentMoniker": "data\\sessions.txt",
               "ToolTip": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\data\\sessions.txt",
               "RelativeToolTip": "data\\sessions.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-10-20T02:36:14.566Z",
+              "WhenOpened": "2025-10-20T02:44:40.318Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "favorites.txt",
               "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\data\\favorites.txt",
               "RelativeDocumentMoniker": "data\\favorites.txt",
@@ -100,20 +82,7 @@
               "RelativeToolTip": "data\\favorites.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-10-20T02:30:59.539Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "auth-middleware.js",
-              "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\middlewares\\auth-middleware.js",
-              "RelativeDocumentMoniker": "src\\webApi\\middlewares\\auth-middleware.js",
-              "ToolTip": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\src\\webApi\\middlewares\\auth-middleware.js",
-              "RelativeToolTip": "src\\webApi\\middlewares\\auth-middleware.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-20T02:28:14.941Z",
+              "WhenOpened": "2025-10-20T02:44:38.906Z",
               "EditorCaption": ""
             },
             {
@@ -131,6 +100,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:5:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "users.txt",
+              "DocumentMoniker": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\data\\users.txt",
+              "RelativeDocumentMoniker": "data\\users.txt",
+              "ToolTip": "C:\\Users\\PC-DELL\\challenge-codigoDelSur\\movies-api-challenge\\data\\users.txt",
+              "RelativeToolTip": "data\\users.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-10-20T02:36:19.049Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",

@@ -29,7 +29,7 @@ router.use(requireAuth);
 
 // rutas
 router.get("/", asyncHandler(makeListFavorites({ favoriteService, userService })));
-router.post("/:movieId", asyncHandler(makeAddFavorite({ favoriteService, userService })));
+router.post("/", asyncHandler(makeAddFavorite({ favoriteService, userService })));
 router.delete("/:movieId", asyncHandler(makeRemoveFavorite({ favoriteService, userService })));
 
 export default router;

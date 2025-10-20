@@ -4,7 +4,7 @@ export const makeAddFavorite = ({ favoriteService, userService }) => async (req,
     const user = await userService.getByEmail(req.userEmail);
     if (!user) throw new NotFoundError("User not found");
 
-    const favorite = await favoriteService.add(user.id, req.params.movieId);
+    const favorite = await favoriteService.add(user.id, req.body.movieId);
 
     res.status(201).json(favorite);
 };
